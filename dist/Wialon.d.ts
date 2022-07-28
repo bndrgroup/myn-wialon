@@ -24,12 +24,12 @@ export interface AvlEvtsResponse<Data> {
     ];
 }
 export declare class Wialon extends RemoteAPI {
-    static tokenLogin: (params: TokenLoginParams, host?: string | undefined) => Promise<Wialon>;
-    static useSession: (sessionId: string, host?: string | undefined) => Wialon;
-    static useAuthHash: (params: CoreUseAuthHashParams, host?: string | undefined) => Promise<Wialon>;
-    duplicateSession: (params?: (Partial<CoreDuplicateParams> & {
-        host?: string | undefined;
-    }) | undefined) => Promise<Wialon>;
+    static tokenLogin: (params: TokenLoginParams, host?: string) => Promise<Wialon>;
+    static useSession: (sessionId: string, host?: string) => Wialon;
+    static useAuthHash: (params: CoreUseAuthHashParams, host?: string) => Promise<Wialon>;
+    duplicateSession: (params?: Partial<CoreDuplicateParams> & {
+        host?: string;
+    }) => Promise<Wialon>;
     execute: <Params, Response_1>(svc: string, params: Params) => Promise<Response_1>;
     avlEvts: <Data = unknown>() => Promise<void>;
     get Unit(): Unit;

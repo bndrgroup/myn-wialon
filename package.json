@@ -1,7 +1,7 @@
 {
-	"name": "node-wialon",
-	"version": "1.16.2",
-	"description": "A NodeJS wrapper implementation for Wialon Remote API",
+	"name": "myn-wialon",
+	"version": "1.16.3",
+	"description": "An Updated NodeJS wrapper implementation for Wialon Remote API",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"typings": "dist/index.d.ts",
@@ -14,7 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ramilamparo/node-wialon.git"
+		"url": "git+https://github.com/bndrgroup/myn-wialon.git"
 	},
 	"keywords": [
 		"wialon"
@@ -22,28 +22,28 @@
 	"author": "Ramil Amparo",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/ramilamparo/node-wialon/issues"
+		"url": "https://github.com/bndrgroup/myn-wialon/issues"
 	},
-	"homepage": "https://github.com/ramilamparo/node-wialon#readme",
+	"homepage": "https://github.com/bndrgroup/myn-wialon#readme",
 	"devDependencies": {
 		"@types/nock": "^11.1.0",
-		"@types/node": "^14.14.35",
-		"@typescript-eslint/eslint-plugin": "^4.18.0",
-		"@typescript-eslint/parser": "^4.18.0",
-		"eslint": "^7.22.0",
-		"eslint-config-airbnb-typescript": "^12.3.1",
-		"eslint-config-prettier": "^8.1.0",
-		"eslint-import-resolver-typescript": "^2.4.0",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-prettier": "^3.3.1",
-		"nock": "^13.0.11",
-		"prettier": "^2.2.1",
-		"prettier-eslint": "^12.0.0",
-		"prettier-eslint-cli": "^5.0.1",
-		"typescript": "^4.2.3"
+		"@types/node": "^18.6.2",
+		"@typescript-eslint/eslint-plugin": "^5.31.0",
+		"@typescript-eslint/parser": "^5.31.0",
+		"eslint": "^8.20.0",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^3.3.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"nock": "^13.2.9",
+		"prettier": "^2.7.1",
+		"prettier-eslint": "^15.0.1",
+		"prettier-eslint-cli": "^6.0.1",
+		"typescript": "^4.7.4"
 	},
 	"dependencies": {
-		"axios": "^0.21.1",
+		"axios": "^0.27.2",
 		"form-data": "^4.0.0"
 	},
 	"files": [

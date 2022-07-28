@@ -16,11 +16,10 @@ export interface CreateAndUpdateParams extends BaseParams {
 	v: string;
 }
 
-export type Params<
-	CallModeParam extends CallMode
-> = CallModeParam extends Extract<CallMode, "create" | "update">
-	? CreateAndUpdateParams
-	: BaseParams;
+export type Params<CallModeParam extends CallMode> =
+	CallModeParam extends Extract<CallMode, "create" | "update">
+		? CreateAndUpdateParams
+		: BaseParams;
 
 export interface CreateAndUpdateResponse {
 	/** Custom Field ID */

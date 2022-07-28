@@ -38,11 +38,10 @@ export interface BaseParams<CallModeParam extends CallMode> {
 	callMode: CallModeParam;
 }
 
-export type Params<
-	CallModeParam extends CallMode
-> = CallModeParam extends Extract<"create" | "update", CallModeParam>
-	? CreateAndUpdateParams
-	: BaseParams<Extract<CallMode, "delete" | "reset_image">>;
+export type Params<CallModeParam extends CallMode> =
+	CallModeParam extends Extract<"create" | "update", CallModeParam>
+		? CreateAndUpdateParams
+		: BaseParams<Extract<CallMode, "delete" | "reset_image">>;
 
 export interface CreateAndUpdateResponse {
 	/** driver ID */

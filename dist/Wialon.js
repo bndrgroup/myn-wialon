@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Wialon = void 0;
 const axios_1 = __importDefault(require("axios"));
@@ -65,6 +66,7 @@ class Wialon extends RemoteAPI_1.RemoteAPI {
     }
 }
 exports.Wialon = Wialon;
+_a = Wialon;
 Wialon.tokenLogin = (params, host) => __awaiter(void 0, void 0, void 0, function* () {
     const user = yield RemoteAPI_1.RemoteAPI.execute("token/login", params, null, host);
     const wialon = new Wialon(user.eid, { host, auth: user });

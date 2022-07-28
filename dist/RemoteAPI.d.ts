@@ -13,7 +13,7 @@ export interface RemoteAPIOptions {
 }
 export declare abstract class RemoteAPI {
     private session;
-    static buildUrl: <T extends SVC, Params>(url: string, svc: string | T, params?: Params | undefined, sid?: string | undefined) => string;
+    static buildUrl: <T extends SVC, Params>(url: string, svc: string | T, params?: Params | undefined, sid?: string) => string;
     static execute: ExecuteMethod;
     options: RemoteAPIOptions;
     protected constructor(session: string, options?: Partial<RemoteAPIOptions>);

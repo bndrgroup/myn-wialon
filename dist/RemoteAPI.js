@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RemoteAPI = exports.defaultHost = void 0;
 const axios_1 = __importDefault(require("axios"));
@@ -35,6 +36,7 @@ class RemoteAPI {
     }
 }
 exports.RemoteAPI = RemoteAPI;
+_a = RemoteAPI;
 RemoteAPI.buildUrl = (url, svc, params, sid) => {
     let composedUrl = url;
     if (svc || params || sid) {
