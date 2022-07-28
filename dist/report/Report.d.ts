@@ -7,6 +7,10 @@ export declare class Report extends RemoteAPI {
     cleanupResult: () => Promise<ReportCleanupResultResponse>;
     execReport: <T extends ReportExecReportParams>(params: T) => Promise<ReportExecReportResponse<T>>;
     selectResultRows: (params: ReportSelectResultRowsParams) => Promise<ReportSelectResultRowsResponse>;
+    getResultMap: (params: {
+        width: String;
+        Height: String;
+    }) => Promise<any>;
     getReportStatus: () => Promise<ReportGetReportStatusResponse>;
     applyReportResult: () => Promise<import("./exec_report").ExecResponse>;
 }

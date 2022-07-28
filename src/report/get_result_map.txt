@@ -1,0 +1,13 @@
+export interface Params {
+	reportResourceId: number;
+	reportTemplateId: number;
+	reportObjectId: number;
+	reportObjectSecId: number;
+	interval: {
+		from: number;
+		to: number;
+		flags: number;
+	};
+	reportTemplate?: object;
+	remoteExec?: 1 | 0;
+}
