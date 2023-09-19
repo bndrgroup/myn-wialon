@@ -28,9 +28,14 @@ export class Report extends RemoteAPI {
 			ReportSelectResultRowsParams,
 			ReportSelectResultRowsResponse
 		>("report/select_result_rows", params, this.sessionId, this.options.host);
-		
-	public getResultMap = async (params: { width: String, Height: String}) =>
-		RemoteAPI.execute("report/select_result_rows", params, this.sessionId, this.options.host);
+
+	public getResultMap = async (params: { width: String; Height: String }) =>
+		RemoteAPI.execute(
+			"report/select_result_rows",
+			params,
+			this.sessionId,
+			this.options.host
+		);
 
 	public getReportStatus = async () =>
 		RemoteAPI.execute<{}, ReportGetReportStatusResponse>(

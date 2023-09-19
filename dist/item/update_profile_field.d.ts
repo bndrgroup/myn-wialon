@@ -3,7 +3,7 @@ export interface Params {
     n: string;
     v: string;
 }
-export declare type Response = [
+export type Response = [
     number,
     {
         id: number;

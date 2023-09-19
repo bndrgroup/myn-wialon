@@ -11,7 +11,7 @@ export interface Params {
     reportTemplate?: object;
     remoteExec?: 1 | 0;
 }
-export declare type Response<T extends Params> = T extends RemoteExecResponse ? RemoteExecResponse : ExecResponse;
+export type Response<T extends Params> = T extends RemoteExecResponse ? RemoteExecResponse : ExecResponse;
 export interface ExecResponse {
     /** report execution result */
     reportResult: {

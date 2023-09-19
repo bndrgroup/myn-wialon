@@ -25,7 +25,7 @@ class RemoteAPI {
             if (this.options.auth) {
                 return this.options.auth;
             }
-            const response = yield RemoteAPI.execute("core/duplicate", { operateAs: "", continueCurrentSession: true }, this.sessionId);
+            const response = yield _a.execute("core/duplicate", { operateAs: "", continueCurrentSession: true }, this.sessionId);
             this.options.auth = response;
             return response;
         });
@@ -61,7 +61,7 @@ RemoteAPI.execute = (svc, params, sid, url = exports.defaultHost) => __awaiter(v
     if (sid) {
         formData.append("sid", sid);
     }
-    const res = yield axios_1.default.post(RemoteAPI.buildUrl(url, svc), formData, {
+    const res = yield axios_1.default.post(_a.buildUrl(url, svc), formData, {
         headers: Object.assign({}, formData.getHeaders()),
         timeout: 0
     });

@@ -12,7 +12,7 @@ export interface Params {
     pe?: number;
     c?: number;
 }
-export declare type Response = [
+export type Response = [
     /** service interval ID */
     number,
     {

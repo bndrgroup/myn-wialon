@@ -4,4 +4,4 @@ export interface Params {
     operateAs: string;
     checkService: string;
 }
-export declare type Response = TokenLoginResponse;
+export type Response = TokenLoginResponse;

@@ -2,10 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WialonError = void 0;
 class WialonError extends Error {
-    constructor(error) {
-        super(WialonError.getMessage(error.error));
-        this.errorCode = error.error;
-    }
     static getMessage(errorCode) {
         switch (errorCode) {
             case 1:
@@ -53,6 +49,10 @@ class WialonError extends Error {
             default:
                 return "Unknown error";
         }
+    }
+    constructor(error) {
+        super(WialonError.getMessage(error.error));
+        this.errorCode = error.error;
     }
 }
 exports.WialonError = WialonError;

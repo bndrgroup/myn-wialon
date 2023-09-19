@@ -30,7 +30,7 @@ class Wialon extends RemoteAPI_1.RemoteAPI {
         this.duplicateSession = (params) => __awaiter(this, void 0, void 0, function* () {
             const combinedParams = Object.assign({ operateAs: "" }, params);
             const response = yield RemoteAPI_1.RemoteAPI.execute("core/duplicate", combinedParams, this.sessionId);
-            return new Wialon(response.eid, { host: params === null || params === void 0 ? void 0 : params.host, auth: response });
+            return new _a(response.eid, { host: params === null || params === void 0 ? void 0 : params.host, auth: response });
         });
         this.execute = (svc, params) => __awaiter(this, void 0, void 0, function* () {
             return RemoteAPI_1.RemoteAPI.execute(svc, params, this.sessionId, this.options.host);
@@ -69,11 +69,11 @@ exports.Wialon = Wialon;
 _a = Wialon;
 Wialon.tokenLogin = (params, host) => __awaiter(void 0, void 0, void 0, function* () {
     const user = yield RemoteAPI_1.RemoteAPI.execute("token/login", params, null, host);
-    const wialon = new Wialon(user.eid, { host, auth: user });
+    const wialon = new _a(user.eid, { host, auth: user });
     return wialon;
 });
-Wialon.useSession = (sessionId, host) => new Wialon(sessionId, { host });
+Wialon.useSession = (sessionId, host) => new _a(sessionId, { host });
 Wialon.useAuthHash = (params, host) => __awaiter(void 0, void 0, void 0, function* () {
     const user = yield RemoteAPI_1.RemoteAPI.execute("core/use_auth_hash", params);
-    return new Wialon(user.eid, { host, auth: user });
+    return new _a(user.eid, { host, auth: user });
 });

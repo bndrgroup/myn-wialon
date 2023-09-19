@@ -1,4 +1,4 @@
-export declare type Params = {
+export type Params = {
     tableIndex: number;
     config: ParamsConfigRow | ParamsConfigRange;
 };
@@ -28,7 +28,7 @@ export interface ParamsConfigRange {
         rawValues?: number;
     };
 }
-export declare type ReportTableCell = {
+export type ReportTableCell = {
     /** Human readable cell value */
     t: string;
     /** original cell value */
@@ -45,8 +45,8 @@ export declare type ReportTableCell = {
     /** longitude */
     x: number;
 };
-export declare type Row = Omit<ResponseSingle, "c"> & Partial<Pick<ResponseSingle, "c">>;
-export declare type ResponseSingle = {
+export type Row = Omit<ResponseSingle, "c"> & Partial<Pick<ResponseSingle, "c">>;
+export type ResponseSingle = {
     /** row index (from 0) */
     n: number;
     /** number of first message in specified interval */
@@ -66,4 +66,4 @@ export declare type ResponseSingle = {
         set of fields will be the same as parent row has */
     r: Row[];
 };
-export declare type Response = ResponseSingle[];
+export type Response = ResponseSingle[];

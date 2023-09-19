@@ -1,4 +1,4 @@
-export declare type CallMode = "create" | "update" | "delete";
+export type CallMode = "create" | "update" | "delete";
 export interface BaseParams {
     /** Item ID */
     itemId: number;
@@ -13,7 +13,7 @@ export interface CreateAndUpdateParams extends BaseParams {
     /** custom field value */
     v: string;
 }
-export declare type Params<CallModeParam extends CallMode> = CallModeParam extends Extract<CallMode, "create" | "update"> ? CreateAndUpdateParams : BaseParams;
+export type Params<CallModeParam extends CallMode> = CallModeParam extends Extract<CallMode, "create" | "update"> ? CreateAndUpdateParams : BaseParams;
 export interface CreateAndUpdateResponse {
     /** Custom Field ID */
     id: number;
@@ -22,7 +22,7 @@ export interface CreateAndUpdateResponse {
     /** value */
     v: string;
 }
-export declare type Response<CallModeParam extends CallMode> = [
+export type Response<CallModeParam extends CallMode> = [
     number,
     CallModeParam extends Extract<CallMode, "create" | "update"> ? CreateAndUpdateParams : null
 ];

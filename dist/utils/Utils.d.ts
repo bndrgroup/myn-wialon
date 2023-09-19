@@ -18,7 +18,7 @@ export interface UtilsGetAddressParams {
     /** current user ID  */
     uid: number;
 }
-export declare type UtilsGetAddressResponse = string[];
+export type UtilsGetAddressResponse = string[];
 export declare class Utils extends RemoteAPI {
     getUnits: <Response_1 = UnitsDataFormat.GeneralProperties>({ flags }: {
         flags?: number | undefined;

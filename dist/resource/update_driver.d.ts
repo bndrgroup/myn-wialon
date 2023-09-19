@@ -1,4 +1,4 @@
-export declare type CallMode = "create" | "update" | "delete" | "reset_image";
+export type CallMode = "create" | "update" | "delete" | "reset_image";
 /** Parameters required only for create and update call mode. */
 export interface CreateAndUpdateParams extends BaseParams<Extract<"create" | "update", CallMode>> {
     /** extended JSON (with exemple to push notifications) */
@@ -34,7 +34,7 @@ export interface BaseParams<CallModeParam extends CallMode> {
     /** action: create, update, delete, reset_image */
     callMode: CallModeParam;
 }
-export declare type Params<CallModeParam extends CallMode> = CallModeParam extends Extract<"create" | "update", CallModeParam> ? CreateAndUpdateParams : BaseParams<Extract<CallMode, "delete" | "reset_image">>;
+export type Params<CallModeParam extends CallMode> = CallModeParam extends Extract<"create" | "update", CallModeParam> ? CreateAndUpdateParams : BaseParams<Extract<CallMode, "delete" | "reset_image">>;
 export interface CreateAndUpdateResponse {
     /** driver ID */
     id: number;
@@ -73,7 +73,7 @@ export interface CreateAndUpdateResponse {
         x: number;
     };
 }
-export declare type Response<CallModeParam extends CallMode> = [
+export type Response<CallModeParam extends CallMode> = [
     number,
     CallModeParam extends Extract<"create" | "update", CallMode> ? CreateAndUpdateResponse : null
 ];

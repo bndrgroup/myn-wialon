@@ -10,4 +10,4 @@ var ProfileField;
     ProfileField["YEAR"] = "year";
     ProfileField["COLOR"] = "color";
     ProfileField["MODEL"] = "model";
-})(ProfileField = exports.ProfileField || (exports.ProfileField = {}));
+})(ProfileField || (exports.ProfileField = ProfileField = {}));
